@@ -2,7 +2,43 @@
 const express = require('express')
 const router = express.Router()
 
+/* Third Example. */
+
+const players = [
+  { firstname: "eli", lastname: "manning", position: "qb", age: 37, team: "nyg" },
+  { firstname: "tom", lastname: "braddy", position: "qb", age: 41, team: "nep" },
+  { firstname: "jj", lastname: "watt", position: "de", age: 41, team: "hou" }
+]
+const teams = [
+  { name: "giants", city: "new york", conference: "nfc" },
+  { name: "patriots", city: "new england", conference: "afc" },
+  { name: "giants", city: "houston", conference: "afc" }
+]
+
+router.get('/:resource', (req, res) => {
+  const resource = req.params.resource
+  if (resource == 'teams') {
+    res.json({
+      confirmation: 'success',
+      data: teams
+    })
+    return
+  }
+  if (resource == 'players') {
+    res.json({
+      confirmation: 'success',
+      data: players
+    })
+    return
+  }
+  res.json({
+    confirmation: 'fail',
+    message: 'Invalid Request'
+  })
+})
+
 /*  Second Example. */
+/*
 const players = [
   { firstname: "eli", lastname: "manning", position: "qb", age: 37, team: "nyg" },
   { firstname: "tom", lastname: "braddy", position: "qb", age: 41, team: "nep" },
@@ -27,6 +63,7 @@ router.get('/teams', (req, res) => {
     data: teams,
   });
 })
+*/
 
 /*  First Example. */
 /*
