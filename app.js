@@ -11,8 +11,17 @@ const app = express() // initialize app
 
 const config = {
   views: 'views', // Set views directory
-  static: 'public', // Set static assets directory
-  logging: true,
+  static: 'public', // Set static assets 
+  db: { 					// Database configuration. Remember to set env variables in .env file: MONGODB_URI, PROD_MONGODB_URI
+		url: 'mongodb://localhost/footballdb',
+		type: 'mongo',
+		onError: (err) => {
+			console.log('DB Connection Failed!')
+		},
+		onSuccess: () => {
+			console.log('FOOTBALL DB CONNECTED!')
+		}
+	}
 
   /*
     To use the Turbo 360 CMS, from the terminal run
