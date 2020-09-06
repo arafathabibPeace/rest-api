@@ -8,7 +8,6 @@ const players = [
   { firstname: "tom", lastname: "braddy", position: "qb", age: 41, team: "nep" },
   { firstname: "jj", lastname: "watt", position: "de", age: 41, team: "hou" }
 ]
-
 const teams = [
   { name: "giants", city: "new york", conference: "nfc" },
   { name: "patriots", city: "new england", conference: "afc" },
