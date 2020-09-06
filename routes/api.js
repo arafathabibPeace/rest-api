@@ -2,7 +2,7 @@
 const express = require('express')
 const router = express.Router()
 
-/*  This is a sample API route. */
+/*  First Example. */
 
 router.get('/:resource', (req, res) => {
   res.json({
@@ -22,3 +22,4 @@ router.get('/:resource/:id', (req, res) => {
 })
 
 module.exports = router
+
