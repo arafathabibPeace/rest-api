@@ -2,6 +2,8 @@
 const express = require('express')
 const router = express.Router()
 
+
+
 /* Fourth Example. */
 
 const players = [
@@ -38,6 +40,7 @@ router.get('/:resource', (req, res) => {
   })
 
 })
+
 
 /* Third Example. */
 /*
